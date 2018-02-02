@@ -1,13 +1,13 @@
 public class MergeSort {
 
-    private int[] numbers;
-    private int[] helper;
+    private Comparable[] numbers;
+    private Comparable[] helper;
     private int number;
 
-    public void sort(int[] values) {
+    public void sort(Comparable[] values) {
         this.numbers = values;
         number = values.length;
-        this.helper = new int[number];
+        this.helper = new Comparable[number];
         mergesort(0, number - 1);
     }
 
@@ -38,7 +38,7 @@ public class MergeSort {
         // Copy the smallest values from either the left or the right side back
         // to the original array
         while (i <= middle && j <= high) {
-            if (helper[i] <= helper[j]) {
+            if (helper[i].compareTo(helper[j]) <=0) {
                 numbers[k] = helper[i];
                 i++;
             } else {

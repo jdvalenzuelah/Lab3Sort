@@ -7,22 +7,22 @@ import java.io.IOException;
 
 public class BubbleSort{
 // ----------------------------------- BubbleSort --------------------------------------
-	public static int[] bubbleSort(int[] numArray) {
-    int n = numArray.length;
-    int temp = 0;
+	public static Comparable[] bubbleSort(Comparable[] comArray) {
+    int n = comArray.length;
+    Comparable temp = 0;
 
     for (int i = 0; i < n; i++) {
         for (int j = 1; j < (n - i); j++) {
 
-            if (numArray[j - 1] > numArray[j]) {
-                temp = numArray[j - 1];
-                numArray[j - 1] = numArray[j];
-                numArray[j] = temp;
+            if (comArray[j - 1].compareTo(comArray[j]) > 0) {
+                temp = comArray[j - 1];
+                comArray[j - 1] = comArray[j];
+                comArray[j] = temp;
             }
 
         }
     }
-    return numArray;
+    return comArray;
 }
 //--------------------------------------------------------------------------------------
 

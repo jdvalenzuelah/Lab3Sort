@@ -1,9 +1,6 @@
 //Autores: Josue Valenzuela 171001 y  Fernando Hengstenberg 17699, con la ayuda del codigo de: Rajat Mishra.
 // Importamos clases necesarias
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.BufferedReader;
-import java.io.IOException;
+
 
 class QuickSort{
 
@@ -16,27 +13,27 @@ class QuickSort{
        smaller (smaller than pivot) to left of
        pivot and all greater elements to right
        of pivot */
-    int partition(int arr[], int low, int high)
+   public int partition(Comparable arr[], int low, int high)
     {
-        int pivot = arr[high]; 
+        Comparable pivot = arr[high]; 
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
         {
             // If current element is smaller than or
             // equal to pivot
-            if (arr[j] <= pivot)
+            if (arr[j].compareTo(pivot) <= 0 )
             {
                 i++;
  
                 // swap arr[i] and arr[j]
-                int temp = arr[i];
+                Comparable temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
         }
  
         // swap arr[i+1] and arr[high] (or pivot)
-        int temp = arr[i+1];
+        Comparable temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
  
@@ -48,7 +45,7 @@ class QuickSort{
       arr[] --> Array to be sorted,
       low  --> Starting index,
       high  --> Ending index */
-    void sort(int arr[], int low, int high)
+    void sort(Comparable arr[], int low, int high)
     {
         if (low < high)
         {
