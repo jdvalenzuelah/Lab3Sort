@@ -5,7 +5,7 @@
 import java.util.Arrays;
 public class GnomeSort
 {
-	static void gnomeSort(int arr[], int n)
+	static void gnomeSort(Comparable arr[], int n)
 	{
 		int index = 0;
 
@@ -13,21 +13,19 @@ public class GnomeSort
 		{
 			if (index == 0)
 				index++;
-			if (arr[index] >= arr[index-1])
+			if (arr[index].compareTo(arr[index-1]) >= 0)
 				index++;
 			else
 			{
-				int temp =0;
+				Comparable temp;
 				temp = arr[index];
 				arr[index] = arr[index-1];
 				arr[index-1] = temp;
 				index--;
 			}
 		}
-		return;
-	}
 
-	// Driver program to test above functions.
+	}
 	
 }
 

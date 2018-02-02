@@ -9,11 +9,11 @@ import java.util.*;
 class RadixSort {
 
 	// Una función de utilidad para obtener el valor máximo en arr []
-	static int getMax(int arr[], int n)
+	static Comparable getMax(Comparable arr[], int n)
 	{
-		int mx = arr[0];
+		Comparable mx = arr[0];
 		for (int i = 1; i < n; i++)
-			if (arr[i] > mx)
+			if (arr[i].compareTo(mx) > 0)
 				mx = arr[i];
 		return mx;
 	}
@@ -21,12 +21,12 @@ class RadixSort {
 	
 	// Una función para hacer el conteo tipo de arr [] según
 	// el dígito representado por exp.
-	static void countSort(int arr[], int n, int exp)
+	static void countSort(Comparable arr[], int n, int exp)
 	{
 		int output[] = new int[n]; 
 	// matriz de salida
 		int i;
-		int count[] = new int[10];
+		Comparable count[] = new Comparable[10];
 		Arrays.fill(count,0);
 
 		
