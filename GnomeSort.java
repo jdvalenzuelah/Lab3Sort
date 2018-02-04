@@ -5,7 +5,7 @@
 import java.util.Arrays;
 public class GnomeSort
 {
-	static void gnomeSort(Comparable arr[], int n)
+	public static Comparable[] gnomeSort(Comparable[] arr, int n)
 	{
 		int index = 0;
 
@@ -24,7 +24,7 @@ public class GnomeSort
 				index--;
 			}
 		}
-
+		return arr;
 	}
 	
 }

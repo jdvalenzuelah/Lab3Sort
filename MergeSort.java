@@ -1,17 +1,18 @@
 public class MergeSort {
 
-    private Comparable[] numbers;
-    private Comparable[] helper;
-    private int number;
+    private static Comparable[] numbers;
+    private static Comparable[] helper;
+    private static int number;
 
-    public void sort(Comparable[] values) {
-        this.numbers = values;
-        number = values.length;
-        this.helper = new Comparable[number];
+    public static Comparable[] sort(Comparable[] values, int length) {
+        numbers = values;
+        number = length;
+        helper = new Comparable[number];
         mergesort(0, number - 1);
+        return numbers;
     }
 
-    private void mergesort(int low, int high) {
+    private static void mergesort(int low, int high) {
         // check if low is smaller than high, if not then the array is sorted
         if (low < high) {
             // Get the index of the element which is in the middle
@@ -25,7 +26,7 @@ public class MergeSort {
         }
     }
 
-    private void merge(int low, int middle, int high) {
+    private static void merge(int low, int middle, int high) {
 
         // Copy both parts into the helper array
         for (int i = low; i <= high; i++) {

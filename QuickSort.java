@@ -13,7 +13,7 @@ class QuickSort{
        smaller (smaller than pivot) to left of
        pivot and all greater elements to right
        of pivot */
-   public int partition(Comparable arr[], int low, int high)
+   public static int partition(Comparable arr[], int low, int high)
     {
         Comparable pivot = arr[high]; 
         int i = (low-1); // index of smaller element
@@ -45,7 +45,7 @@ class QuickSort{
       arr[] --> Array to be sorted,
       low  --> Starting index,
       high  --> Ending index */
-    void sort(Comparable arr[], int low, int high)
+    public static Comparable[] sort(Comparable arr[], int low, int high)
     {
         if (low < high)
         {
@@ -58,6 +58,7 @@ class QuickSort{
             sort(arr, low, pi-1);
             sort(arr, pi+1, high);
         }
+        return arr;
     }
 //--------------------------------------------------------------------------------------
 
