@@ -9,6 +9,12 @@ import java.util.*;
 class RadixSort {
 
 	// Una funci贸n de utilidad para obtener el valor m谩ximo en arr []
+	/**
+	 * Funcion encuentra el maximo en un array
+	 * @param arr Array donde se buscara el mayor
+	 * @param n tama駉 del array
+	 * @return Elemento maximo del array
+	 */
 	static int getMax(Integer arr[], int n)
 	{
 		int mx = arr[0];
@@ -21,6 +27,12 @@ class RadixSort {
 	
 	// Una funci贸n para hacer el conteo tipo de arr [] seg煤n
 	// el d铆gito representado por exp.
+	/**
+	 * Conteo de tipo array
+	 * @param arr Array para hacer el conteo
+	 * @param n Tama駉 del array
+	 * @param exp Base de los numeros en el array
+	 */
 	static void countSort(Integer arr[], int n, int exp)
 	{
 		int output[] = new int[n]; 
@@ -57,6 +69,11 @@ class RadixSort {
 		
 		// La funci贸n principal para eso ordena arr [] de tama帽o n usando
 		// Radix Sort
+	/**
+	 * Funcion que implementa radixSort para ordenar numeros enteros de menor a mayor
+	 * @param arr Array a ordenar
+	 * @param n Tama駉 del array
+	 */
 	static void radixSort(Integer arr[], int n)
 	{
 		
@@ -70,11 +87,6 @@ class RadixSort {
 		for (int exp = 1; m/exp > 0; exp *= 10)
 			countSort(arr, n, exp);
 	}
-
-
-
-	
-/* Funci贸n de controlador para verificar la funci贸n anterior */
 					
 	
 }

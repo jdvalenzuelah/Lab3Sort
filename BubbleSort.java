@@ -2,6 +2,11 @@
 
 public class BubbleSort{
 // ----------------------------------- BubbleSort --------------------------------------
+	/**
+	 * Metodod que implementa bubble sort para objetos d¿que implemente la clase comparable
+	 * @param comArray lista de objetos a ordenar (de memor a mayor).
+	 * @return Lista de objetos ordenada
+	 */
 	public static Comparable[] bubbleSort(Comparable[] comArray) {
     int n = comArray.length;
     Comparable temp = 0;

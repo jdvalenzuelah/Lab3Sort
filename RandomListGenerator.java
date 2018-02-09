@@ -90,6 +90,12 @@ public class RandomListGenerator {
         return data;
     }
     
+    /**
+     * Escribir un archivo csv
+     * @param listS lista a escribir en el archivo
+     * @param filePath Path del archivo
+     * @return resultado de la operacion
+     */
     public static String writeFile(Comparable[] listS, String filePath) {
     	try {
     		PrintWriter file = new  PrintWriter(filePath, "UTF-8");

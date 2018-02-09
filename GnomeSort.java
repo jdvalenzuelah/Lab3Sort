@@ -5,6 +5,11 @@
 import java.util.Arrays;
 public class GnomeSort
 {
+	/**
+	 * @param arr Array a ordenar	
+	 * @param n tamaño del array
+	 * @return Array ya ordenaado
+	 */
 	public static Comparable[] gnomeSort(Comparable[] arr, int n)
 	{
 		int index = 0;
