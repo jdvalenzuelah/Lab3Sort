@@ -13,8 +13,15 @@ class QuickSort{
        smaller (smaller than pivot) to left of
        pivot and all greater elements to right
        of pivot */
-   public static int partition(Comparable arr[], int low, int high)
-    {
+	/**
+	 * Funcion toma el ultimo elemento de la lista como un pivot, el pivot es colocado en la posicion correcta
+	 * en la lista ordenada, y coloca todos los elementos menores a la derecha y todo los mayores a la izquierda.
+	 * @param arr Lista de datos
+	 * @param low Index del primer elemento
+	 * @param high Index del ultimo elemento
+	 * @return
+	 */
+   public static int partition(Comparable arr[], int low, int high){
         Comparable pivot = arr[high]; 
         int i = (low-1); // index of smaller element
         for (int j=low; j<high; j++)
@@ -45,6 +52,13 @@ class QuickSort{
       arr[] --> Array to be sorted,
       low  --> Starting index,
       high  --> Ending index */
+   /**
+    * Funcion principal que ordena una lista de objetos que implementan la clase Comparable utilizando QuickSort
+    * @param arr
+    * @param low
+    * @param high
+    * @return
+    */
     public static Comparable[] sort(Comparable arr[], int low, int high)
     {
         if (low < high)
