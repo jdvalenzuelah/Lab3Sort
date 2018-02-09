@@ -13,5 +13,7 @@ public class SortsOrdenados {
 			BubbleSort.bubbleSort(list);
 			RadixSort.radixSort(list, i);
 		}
+		System.out.println("Press any key to exit...");
+		sc.next();
 	}
 }
