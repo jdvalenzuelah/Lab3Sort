@@ -17,7 +17,7 @@ public class RandomListGenerator {
 	 * Genera un archivo de texto con una lista de n numeros enteros en orden aleatorio entre 0 y 10000 separados por una coma.
 	 * @param filePath Direccion del archivo a generar la lista de numeros (Si existe sera sobre escrito, si no existe sera creado).
 	 * @param listSize Tamaño de la lista de numeros a generar.
-	 * @return
+	 * @return Resultado de la operacion
 	 */
 	public static String intFile(String filePath, int listSize) {
 		try{
@@ -34,6 +34,27 @@ public class RandomListGenerator {
 			return e.getMessage();
 		}
 	}
+
+  /**
+   * Genera un archivo de texto con una lista de n numeros enteros en orden de 0 a listSize separados por una coma.
+   * @param filePath Direccion del archivo a generar la lista de numeros (Si existe sera sobre escrito, si no existe sera creado).
+   * @param listSize Tamaño de la lista de numeros a generar.
+   * @return Resultado de la operacion
+   */
+  public static String sortedIntFile(String filePath, int listSize){
+    try{
+      // Abrir el archivo o crear el archivo a generara con encoding UTF-8
+      PrintWriter file = new  PrintWriter(filePath, "UTF-8");
+      for(int i = 0; i < listSize; i++){
+        file.print(i + ","); // Entrada de numero aleatorio
+      }
+      file.close(); // Cerrar el archivo
+      return "File generated succesully";
+    }catch (IOException e){
+      // En caso de error
+      return e.getMessage();
+    }
+  }
 	
 
     /**
@@ -50,7 +71,7 @@ public class RandomListGenerator {
         return strListToIntList(records);
         }
       catch(Exception e){
-        System.err.format("Exception occurred trying to read '%s'.");
+        System.err.format("Exception occurred trying to read");
         e.printStackTrace();
         return null;
       }
@@ -75,7 +96,11 @@ public class RandomListGenerator {
     		for(Comparable element : listS) {
     			file.print(element + ",");
     		}
-    	}
+    		file.print("0");
+    		return "Writed Succesfully";
+    		}catch(IOException e) {
+    			return e.getMessage();
+    		}
     }
 
 

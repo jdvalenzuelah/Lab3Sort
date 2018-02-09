@@ -9,7 +9,7 @@ import java.util.*;
 class RadixSort {
 
 	// Una función de utilidad para obtener el valor máximo en arr []
-	static int getMax(int arr[], int n)
+	static int getMax(Integer arr[], int n)
 	{
 		int mx = arr[0];
 		for (int i = 1; i < n; i++)
@@ -21,7 +21,7 @@ class RadixSort {
 	
 	// Una función para hacer el conteo tipo de arr [] según
 	// el dígito representado por exp.
-	static void countSort(int arr[], int n, int exp)
+	static void countSort(Integer arr[], int n, int exp)
 	{
 		int output[] = new int[n]; 
 	// matriz de salida
@@ -57,7 +57,7 @@ class RadixSort {
 		
 		// La función principal para eso ordena arr [] de tamaño n usando
 		// Radix Sort
-	static void radixsort(int arr[], int n)
+	static void radixSort(Integer arr[], int n)
 	{
 		
 		// Encuentra el número máximo para saber la cantidad de dígitos
@@ -71,12 +71,6 @@ class RadixSort {
 			countSort(arr, n, exp);
 	}
 
-	// Una función de utilidad para imprimir una matriz
-	static void print(int arr[], int n)
-	{
-		for (int i=0; i<n; i++)
-			System.out.print(arr[i]+" ");
-	}
 
 
 	
