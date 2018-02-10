@@ -4,6 +4,12 @@ public class MergeSort {
     private static Comparable[] helper;
     private static int number;
 
+    /**
+     * Funcion que implementa Merge sort para ordenar objetos de menor a mayor
+     * @param values Lista a ordear
+     * @param length Tamaño de la lista
+     * @return Lista ya ordenada
+     */
     public static Comparable[] sort(Comparable[] values, int length) {
         numbers = values;
         number = length;
@@ -12,6 +18,11 @@ public class MergeSort {
         return numbers;
     }
 
+    /**
+     * IMplementacion de merge sort
+     * @param low indice dato mas bajo
+     * @param high indice dato mas alto
+     */
     private static void mergesort(int low, int high) {
         // check if low is smaller than high, if not then the array is sorted
         if (low < high) {
@@ -26,6 +37,12 @@ public class MergeSort {
         }
     }
 
+    /**
+     * Implementacion de merge
+     * @param low indice elemento mas pequeño
+     * @param middle indice elemento medio
+     * @param high indice elemento mas alto
+     */
     private static void merge(int low, int middle, int high) {
 
         // Copy both parts into the helper array
